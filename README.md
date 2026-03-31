@@ -16,6 +16,7 @@ A simple web app that generates a random Pokémon and lets you reveal its name.
 - CSS
 - JavaScript
 - [PokéAPI](https://pokeapi.co/) — free Pokémon data API
+- background image from Pinterest
 
 ## Getting Started
 
