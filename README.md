@@ -1,4 +1,4 @@
-# PokeGen 🎮
+# PokeGen 
 
 A simple web app that generates a random Pokémon and lets you reveal its name.
 
@@ -29,10 +29,10 @@ A simple web app that generates a random Pokémon and lets you reveal its name.
 
 ## Planned Features
 
-- [ ] AI generated quote based on the Pokémon's personality
-- [ ] Rebuild in React
-- [ ] Migrate to Next.js
-- [ ] Deploy to Vercel
+- AI generated quote based on the Pokémon's personality
+- Rebuild in React
+- Migrate to Next.js
+
 
 ## License
 
