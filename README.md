@@ -2,13 +2,13 @@
 
 A simple web app that generates a random Pokémon and lets you reveal its name.
 
-> ⚠️ Work in progress! Can be viewed at https://vercel.com/clarabkwons-projects/pokegen/deployments
+> ⚠️ Work in progress! Can be viewed at https://pokegen-rho.vercel.app
 ## Features
 
-- 🎲 Fetches a random Pokémon from IDs 1–1000
-- 🖼️ Displays the Pokémon's sprite
-- 👀 Hides the Pokémon's name until you choose to reveal it
-- 🎮 Styled with the Press Start 2P font for a retro Pokémon feel
+- Fetches a random Pokémon from IDs 1–1000
+- Displays the Pokémon's sprite
+- Hides the Pokémon's name until you choose to reveal it
+- Styled with the Press Start 2P font for a retro Pokémon feel
 
 ## Built With
 
