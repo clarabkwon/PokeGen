@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function PokemonGenerator() {
   const [pokemon, setPokemon] = useState(null);
-  const [showName, setShowName] = useState(false);
+  const [revealedId, setRevealedId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [quote, setQuote] = useState("");
@@ -39,7 +39,7 @@ export default function PokemonGenerator() {
     const pokemonId = Math.floor(Math.random() * 1000) + 1;
     setLoading(true);
     setError("");
-    setShowName(false);
+    setRevealedId(null);
     setQuote("");
     setQuoteError("");
 
@@ -87,25 +87,29 @@ export default function PokemonGenerator() {
       ) : null}
 
       <div className="pokemonNameClass">
-        {pokemon && !showName ? (
-          <button id="pokemonNameButton" onClick={() => setShowName(true)}>
+        {pokemon && revealedId !== pokemon.id ? (
+          <button id="pokemonNameButton" onClick={() => setRevealedId(pokemon.id)}>
             Show Pokemon Name
           </button>
         ) : null}
 
-        {showName && pokemon ? (
+        {pokemon && revealedId === pokemon.id ? (
           <p id="pokemonName" className="show">
             The name of the pokemon is: {pokemon.name}
           </p>
         ) : null}
 
-        {showName && quoteLoading ? (
+        {pokemon && revealedId === pokemon.id && quoteLoading ? (
           <p className="status">Thinking of a quote...</p>
         ) : null}
 
-        {showName && quoteError ? <p className="error">{quoteError}</p> : null}
+        {pokemon && revealedId === pokemon.id && quoteError ? (
+          <p className="error">{quoteError}</p>
+        ) : null}
 
-        {showName && quote ? <p className="quote">{quote}</p> : null}
+        {pokemon && revealedId === pokemon.id && quote ? (
+          <p className="quote">{quote}</p>
+        ) : null}
       </div>
     </main>
   );
