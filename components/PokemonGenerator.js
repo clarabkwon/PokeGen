@@ -7,41 +7,12 @@ export default function PokemonGenerator() {
   const [revealedId, setRevealedId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [quote, setQuote] = useState("");
-  const [quoteLoading, setQuoteLoading] = useState(false);
-  const [quoteError, setQuoteError] = useState("");
-
-  async function loadQuote(name, id) {
-    setQuoteLoading(true);
-    setQuote("");
-    setQuoteError("");
-
-    try {
-      const response = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, id }),
-      });
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.error || "Quote failed");
-      }
-      setQuote(data.quote);
-    } catch (quoteFetchError) {
-      console.error(quoteFetchError);
-      setQuoteError("Could not generate a quote.");
-    } finally {
-      setQuoteLoading(false);
-    }
-  }
 
   async function fetchPokemon() {
     const pokemonId = Math.floor(Math.random() * 1000) + 1;
     setLoading(true);
     setError("");
     setRevealedId(null);
-    setQuote("");
-    setQuoteError("");
 
     try {
       const response = await fetch(
@@ -52,13 +23,11 @@ export default function PokemonGenerator() {
       }
 
       const data = await response.json();
-      const nextPokemon = {
+      setPokemon({
         id: data.id,
         name: data.name,
         sprite: data.sprites.front_default,
-      };
-      setPokemon(nextPokemon);
-      loadQuote(nextPokemon.name, nextPokemon.id);
+      });
     } catch (fetchError) {
       console.error(fetchError);
       setError("Could not fetch a Pokémon. Try again.");
@@ -97,18 +66,6 @@ export default function PokemonGenerator() {
           <p id="pokemonName" className="show">
             The name of the pokemon is: {pokemon.name}
           </p>
-        ) : null}
-
-        {pokemon && revealedId === pokemon.id && quoteLoading ? (
-          <p className="status">Thinking of a quote...</p>
-        ) : null}
-
-        {pokemon && revealedId === pokemon.id && quoteError ? (
-          <p className="error">{quoteError}</p>
-        ) : null}
-
-        {pokemon && revealedId === pokemon.id && quote ? (
-          <p className="quote">{quote}</p>
         ) : null}
       </div>
     </main>

@@ -1,6 +1,6 @@
 # PokeGen
 
-A Next.js web app that generates a random Pokémon, lets you reveal its name, and shows a personality quote.
+A Next.js web app that generates a random Pokémon and lets you reveal its name.
 
 > Can be viewed at https://pokegen-rho.vercel.app
 
@@ -9,7 +9,6 @@ A Next.js web app that generates a random Pokémon, lets you reveal its name, an
 - Fetches a random Pokémon from IDs 1–1000
 - Displays the Pokémon's sprite
 - Hides the Pokémon's name until you choose to reveal it
-- Shows an AI personality quote (falls back to Pokédex flavor text if no API key is set)
 - Styled with the Press Start 2P font for a retro Pokémon feel
 
 ## Built With
@@ -18,7 +17,6 @@ A Next.js web app that generates a random Pokémon, lets you reveal its name, an
 - React
 - JavaScript
 - [PokéAPI](https://pokeapi.co/) — free Pokémon data API
-- Optional [OpenAI](https://platform.openai.com/) for AI quotes
 - background image from Pinterest
 
 ## Getting Started
@@ -37,7 +35,9 @@ A Next.js web app that generates a random Pokémon, lets you reveal its name, an
    ```
 4. Open [http://localhost:3000](http://localhost:3000).
 
-To enable AI-generated quotes, copy `.env.example` to `.env.local` and set `OPENAI_API_KEY`. Without that key, quotes use English Pokédex flavor text from PokéAPI.
+## Planned Features
+
+- AI generated quote based on the Pokémon's personality
 
 ## License
 

@@ -53,19 +53,10 @@ img {
   display: block;
 }
 
-.status,
-.error,
-.quote {
+.error {
   font-size: 10px;
   line-height: 1.8;
   max-width: 480px;
   padding: 0 16px;
-}
-
-.error {
   color: #8b0000;
-}
-
-.quote {
-  margin: 0;
 }
