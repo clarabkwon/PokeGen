@@ -1,0 +1,71 @@
+body {
+  background-image: url(/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+
+.fetchButton {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+
+#fetchText {
+  border-radius: 5%;
+  font-family: inherit;
+  background-color: rgb(230, 230, 230);
+  width: 250px;
+  height: 55px;
+}
+
+.pokemonNameClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  font-family: inherit;
+  text-align: center;
+  gap: 12px;
+}
+
+#pokemonNameButton {
+  border-radius: 5%;
+  font-family: inherit;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.status,
+.error,
+.quote {
+  font-size: 10px;
+  line-height: 1.8;
+  max-width: 480px;
+  padding: 0 16px;
+}
+
+.error {
+  color: #8b0000;
+}
+
+.quote {
+  margin: 0;
+}
