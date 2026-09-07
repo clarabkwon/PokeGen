@@ -1,0 +1,13 @@
+{
+  "name": "PokeGen",
+  "ports": [
+    { "name": "web", "port": 8000 }
+  ],
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 -m http.server 8000 --directory /workspace",
+      "description": "Serves the static PokeGen site at http://localhost:8000 (open /index.html)."
+    }
+  ]
+}
