@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import pokeball from './assets/pokeball.png'
 import heartLogo from './assets/heart_info.png'
 import signInfo from './assets/sign_info.png'
 import correctBox from './assets/correct_box.png'
@@ -87,7 +88,10 @@ function App() {
         <img src={heartLogo} alt="" className="heartLogo" />
       </button>
 
-      <h1 className="title">PokeGen</h1>
+      <h1 className="title">
+        <img src={pokeball} alt="" className="titleLogo" />
+        PokeGen
+      </h1>
 
       <div className="fetchButton">
         <button id="fetchText" onClick={fetchPokemon} disabled={loading}>
