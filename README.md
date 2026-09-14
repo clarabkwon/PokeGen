@@ -1,40 +1,32 @@
-# PokeGen 
+# PokeGen
 
-A simple web app that generates a random Pokémon and lets you reveal its name.
+A Pokémon guessing game that fetches a random Pokémon and lets you reveal its name, then track correct and incorrect guesses.
 
-> ⚠️ Work in progress! Can be viewed at https://pokegen-rho.vercel.app
+> Can be viewed at https://pokegen-rho.vercel.app
+
 ## Features
 
-- Fetches a random Pokémon from IDs 1–1000
-- Displays the Pokémon's sprite
-- Hides the Pokémon's name until you choose to reveal it
-- Styled with the Press Start 2P font for a retro Pokémon feel
+- Fetches a random Pokémon from IDs 1–1000 using [PokéAPI](https://pokeapi.co/)
+- Displays the Pokémon's sprite and hides the name until you reveal it
+- Tracks correct and incorrect guesses, with a restart option
+- Retro pixel-art UI with the Press Start 2P font
 
 ## Built With
 
-- HTML
-- CSS
+- React
+- Vite
 - JavaScript
-- [PokéAPI](https://pokeapi.co/) — free Pokémon data API
-- background image from Pinterest
+- [PokéAPI](https://pokeapi.co/)
+- Background image from Pinterest
 
 ## Getting Started
 
-1. Clone the repo:
+1. Clone the repo
+2. Install dependencies:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/pokegen.git
+   npm install
    ```
-2. Open `index.html` in your browser — no install needed.
-
-
-
-## Planned Features
-
-- AI generated quote based on the Pokémon's personality
-- Rebuild in React
-- Migrate to Next.js
-
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
